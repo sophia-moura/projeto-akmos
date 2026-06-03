@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.logo{
+    height:70px;
+    width:auto;
+}
+
+body{
+    font-family:'Lato', sans-serif;
+    background:#f8f8f8;
+}
+html{
+	margin: 0;
+	padding: 0;
+}
+html{ min-height: 100%; }
+
+
+.links {
+    color: #eee;
+	font-family: 'Lato', sans-serif;
+	font-size: 62.5%;
+	padding: 0 20px;
+	box-sizing: border-box;
+    border-radius: 8px;
+	box-sizing: border-box;
+    
+    
+	background-color: rgb(255, 255, 255);
+	background-image: linear-gradient(to bottom, rgb(255, 255, 255), transparent);
+	border-bottom: 1px solid rgb(255, 255, 255);
+	box-shadow: 0 0 32px rgb(255, 255, 255);
+	font-size: 2em;
+	font-weight: 300;
+}
+.links > a {
+	color: #622673;
+	padding: .75em;
+	text-align: center;
+	text-decoration: none;
+	transition: all .5s;
+}
+.links > a:hover {
+	background: #ffffff;
+	color: #6E268C;
+}
+.links > .line {
+	background: #622673;
+	height: 1px;
+	pointer-events: none;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.links {
+	display: grid;
+	grid-template-columns: repeat(var(--items), 1fr);
+	position: relative;
+}
+.links > .line {
+	opacity: 0;
+	transition: all .5s;
+	position: absolute;
+	bottom: 0;
+	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
+	width: var(--width, calc(100% / var(--items)));
+	--index: 0;
+}
+.links > a:hover ~ .line {
+	opacity: 1;
+}
+
+.links > a:nth-of-type(1):hover ~ .line { --index: 1; }
+.links > a:nth-of-type(2):hover ~ .line { --index: 2; }
+.links > a:nth-of-type(3):hover ~ .line { --index: 3; }
+.links > a:nth-of-type(4):hover ~ .line { --index: 4; }
+
+.banner{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    display:block;
+}
+
+h1{
+    font-family:'Playfair Display', serif;
+    text-align:center;
+    color:#622673;
+    font-size:3rem;
+    margin:40px 20px;
+    font-weight:700;
+}
+
+footer{
+    background:#622673;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
