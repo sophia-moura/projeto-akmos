@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akmos Brasil | Revendedora Silvana</title>
+    <title>Akmos Brasil | login e cadastro</title>
 
     <link rel="shortcut icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-CfRFqs69vl7mCHbK4LxExYBvksuJmQIY0Q&s">
@@ -45,61 +45,53 @@
             <a href="/projeto-akmos-main/controleDePeso.html">Controle de Peso</a>
 
         </div>
-        <main>
-            <h2>Beleza</h2>
-            <section class="produtos">
 
-                <div class="grid-produtos">
+<body>
 
-                    <div class="produto">
-                        <img src="https://s3.us-east-1.amazonaws.com/files.akmos.com.vc/evak-loja-produtos/2911/image_1_686e7c82ef20d.png" alt="">
-                        <h3>Colageno Drink Da Beleza Young 4k Frutas Vermelhas 160g</h3>
-                        <p class="preco">R$ 159,70</p>
-                        <button>Adicionar à Sacola</button>
-                    </div>
+    <div class="login">
 
-                    <div class="produto">
-                        <img src="https://s3.us-east-1.amazonaws.com/files.akmos.com.vc/evak-loja-produtos/3222/image_1_686facdd8d4ad.png" alt="">
-                        <h3>Colageno Drink Da Beleza Young 4k Abacaxi Com Hortela 160g</h3>
-                        <p class="preco">R$ 159,70</p>
-                        <button>Adicionar à Sacola</button>
-                    </div>
+    <div class="container1">
 
-                    <div class="produto">
-                        <img src="https://s3.us-east-1.amazonaws.com/files.akmos.com.vc/evak-loja-produtos/3229/image_1_686ea7b96492c.png" alt="">
-                        <h3>Serum Hidratante Corporal Vanilla Care 200g</h3>
-                        <p class="preco">R$ 84,70</p>
-                        <button>Adicionar à Sacola</button>
-                    </div>
+        <!-- Login -->
+        <div id="login-box">
+            <h2>Login</h2>
 
-                    <div class="produto">
-                        <img src="https://s3.us-east-1.amazonaws.com/files.akmos.com.vc/evak-loja-produtos/2902/image_1_686ff578eb1aa.png" alt="">
-                        <h3>Creme Para Os Pes Lan Creme Prebiotico 90g</h3>
-                        <p class="preco">R$ 57,50</p>
-                        <button>Adicionar à Sacola</button>
-                    </div>
+            <form id="loginForm">
+                <input type="text" placeholder="Usuário" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
 
-                    <div class="produto">
-                        <img src="https://s3.us-east-1.amazonaws.com/files.akmos.com.vc/evak-loja-produtos/814/image_1_686ff49cd7cf5.png" alt="">
-                        <h3>Protetor Solar Fps 30 Protect Skin 150g</h3>
-                        <p class="preco">R$ 109,70</p>
-                        <button>Adicionar à Sacola</button>
-                    </div>
+            <p>
+                Não possui uma conta?
+                <a href="#" onclick="mostrarCadastro()">Cadastre-se</a>
+            </p>
+        </div>
 
-                    <div class="produto">
-                        <img src="https://imagedelivery.net/nGG8RBn9tghnTKuWoMGfYw/f88484aa-8c5e-4424-a501-6b0d2199cb00/public" alt="">
-                        <h3>Esfoliante Renover Gomage+ 90g</h3>
-                        <p class="preco">R$ 77,90</p>
-                        <button>Adicionar à Sacola</button>
-                    </div>
+        <!-- Cadastro -->
+        <div id="cadastro-box" style="display:none;">
+            <h2>Cadastro</h2>
 
-                </div>
+            <form id="cadastroForm">
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="text" placeholder="Usuário" required>
+                <input type="password" placeholder="Senha" required>
+                <input type="password" placeholder="Confirmar Senha" required>
 
-            </section>
+                <button type="submit">Cadastrar</button>
+            </form>
 
-        </main>
+            <p>
+                Já possui uma conta?
+                <a href="#" onclick="mostrarLogin()">Fazer Login</a>
+            </p>
+        </div>
 
-        <footer>
+    </div>
+    </div>
+
+    <footer>
 
             <div class="footer-container">
 
@@ -162,8 +154,8 @@
 
         </footer>
 
-    </div>
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 
 </html>

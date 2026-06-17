@@ -285,3 +285,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+/*login e cadastro*/
+
+function mostrarCadastro() {
+    document.getElementById("login-box").style.display = "none";
+    document.getElementById("cadastro-box").style.display = "block";
+}
+
+function mostrarLogin() {
+    document.getElementById("cadastro-box").style.display = "none";
+    document.getElementById("login-box").style.display = "block";
+}
+
+document.getElementById("cadastroForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    alert("Cadastro realizado com sucesso!");
+
+    mostrarLogin();
+});
+
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    alert("Login realizado!");
+});
